@@ -1,0 +1,41 @@
+class library:
+    def __init__(self,book,author,page):
+        self.book=book
+        self.author=author
+        self.page=page
+    def get_book(self):
+        return self.book
+    def get_author(self):
+        return self.author
+    def get_page(self):
+        return self.page
+book1=library("ABC","Tania","35")
+book2=library("pyhton","robert","39")
+book3=library("c++","hrmn","40")
+book4=library("maths","","55")
+book5=library("english","Tania","65")
+book6=library("hindi","rmn","35")
+book7=library("punjabi","sujal","35")
+book8=library("dsa","nisha","95")
+book9=library("ironman","sumit","25")
+book10=library("science","arsh","85")
+print("Book name :",book1.get_book(),", Author of book :",book1.get_author(),", Pages in book :",book1.get_page())
+print("Book name :",book2.get_book(),", Author of book :",book2.get_author(),", Pages in book :",book2.get_page())
+
+print("Book name :",book3.get_book(),", Author of book :",book3.get_author(),", Pages in book :",book3.get_page())
+
+print("Book name :",book4.get_book(),", Author of book :",book4.get_author(),", Pages in book :",book4.get_page())
+
+print("Book name :",book5.get_book(),", Author of book :",book5.get_author(),", Pages in book :",book5.get_page())
+
+print("Book name :",book6.get_book(),", Author of book :",book6.get_author(),", Pages in book :",book6.get_page())
+
+print("Book name :",book7.get_book(),", Author of book :",book7.get_author(),", Pages in book :",book7.get_page())
+
+print("Book name :",book8.get_book(),", Author of book :",book8.get_author(),", Pages in book :",book8.get_page())
+
+print("Book name :",book9.get_book(),", Author of book :",book9.get_author(),", Pages in book :",book9.get_page())
+
+print("Book name :",book10.get_book(),", Author of book :",book10.get_author(),", Pages in book :",book10.get_page())
+
+
