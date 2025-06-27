@@ -1,0 +1,12 @@
+#stack in python
+l=[]
+l.append("harman")
+l.append("tania")
+l.append("nisha")
+print(l)
+last=l.pop()
+print(l[len(l)-1])
+print(l)
+
+
+
