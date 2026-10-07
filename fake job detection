@@ -1,0 +1,32 @@
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+import pickle
+
+app = Flask(__name__)
+CORS(app)
+
+print("Loading model...")
+
+model = pickle.load(open("model.pkl", "rb"))
+vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
+
+print("Model loaded successfully ✅")
+
+@app.route("/")
+def home():
+    return "Server is running ✅"
+
+@app.route("/predict", methods=["POST"])
+def predict():
+    data = request.json["text"]
+    print("Received:", data)
+
+    transformed = vectorizer.transform([data])
+    prediction = model.predict(transformed)[0]
+
+    result = "Fake Job ❌" if prediction == 1 else "Real Job ✅"
+
+    return jsonify({"prediction": result})
+
+if __name__ == "__main__":
+    app.run(debug=True)
